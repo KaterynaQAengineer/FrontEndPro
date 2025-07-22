@@ -55,6 +55,7 @@ console.log(typeof therapeuticCategories); // object
 let username = prompt ('Enter your name');
 let country = prompt ('Where are you from?');
 let speciality = prompt ('Which speciality do you have?');
+let graduate = prompt ('Enter graduation year')
 
-let userInformation = `Congrats! A new account was succesfully created for ${username} from ${country}. Specialyti: ${speciality}.`;
+let userInformation = `Congrats! A new account was succesfully created for ${username} from ${country}. Specialyti: ${speciality}. Graduation year: ${graduate} `;
 console.log(userInformation)
