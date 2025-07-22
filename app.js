@@ -6,7 +6,7 @@ let drugID = 12345678;
 console.log(drugID); 
 console.log(typeof drugID); // number
 
-let price = '$ 997.58';
+let price = '997.58 $';
 console.log(price);
 console.log(typeof price); // string
 price = parseFloat(price);
