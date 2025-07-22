@@ -1,3 +1,4 @@
+//HW3.1
 let drugName ='Ozempic';
 console.log(drugName);  
 console.log(typeof drugName); // string
@@ -49,3 +50,11 @@ console.log(typeof drug); // object
 let therapeuticCategories = ['Allergic Disorders', 'Cardiovascular Disease', 'Dermatological Disorders'];
 console.log(therapeuticCategories);
 console.log(typeof therapeuticCategories); // object
+
+//HW3.2
+let username = prompt ('Enter your name');
+let country = prompt ('Where are you from?');
+let speciality = prompt ('Which speciality do you have?');
+
+let userInformation = `Congrats! A new account was succesfully created for ${username} from ${country}. Specialyti: ${speciality}.`;
+console.log(userInformation)
