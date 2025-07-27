@@ -184,7 +184,7 @@
 // if (firstDigit === prevtDigit  && firstDigit === lastDigit && prevtDigit === lastDigit)  {
 //     console.log('All the digits are the same');
 // }
-// if ((firstDigit === prevtDigit && firstDigit !== lastDigit) || 
+// else if ((firstDigit === prevtDigit && firstDigit !== lastDigit) || 
 // (firstDigit === lastDigit && firstDigit !== prevtDigit) || 
 // (prevtDigit === lastDigit && prevtDigit !== firstDigit))  {
 // console.log('Among the numbers there are the same');
@@ -195,27 +195,142 @@
 
 
 //7
-let digit = prompt('Enter six-digit number');
-let lastDigit = digit % 10; 
+// let digit = prompt('Enter six-digit number');
+// let lastDigit = digit % 10; 
+// // console.log(lastDigit);
+// digit = digit-lastDigit; 
+// let prevDigit = (digit/10) % 10; 
+// // console.log(prevDigit);
+// digit =  (digit/10) - prevDigit; 
+// let prevDigit2 = (digit/10) % 10; 
+// // console.log(prevDigit2); 
+// digit = (digit/10) - prevDigit2; 
+// let prevDigit3 = (digit/10) %10;  
+// // console.log (prevDigit3);
+// digit = (digit/10) - prevDigit3; 
+// let prevDigit4 = (digit/10) % 10; 
+// // console.log (prevDigit4);
+// digit = (digit/10) - prevDigit4; 
+// let firstDigit = digit/10; 
+// // console.log (firstDigit);
+// if (firstDigit === lastDigit && prevDigit === prevDigit4 && prevDigit2 === prevDigit3) {
+//     console.log('The six-digit is mirror number');
+// }
+// else {
+//     console.log('The six-digit is not mirror number');
+// }
+
+
+//HW4.1
+// let name = prompt ('Enter user name');
+// alert (`Hello, ${name}! How are you?`);
+
+
+// //HW4.2
+// let digit = prompt('Enter tree-digit number');
+// let lastDigit = digit % 10; 
 // console.log(lastDigit);
-digit = digit-lastDigit; 
-let prevDigit = (digit/10) % 10; 
-// console.log(prevDigit);
-digit =  (digit/10) - prevDigit; 
-let prevDigit2 = (digit/10) % 10; 
-// console.log(prevDigit2); 
-digit = (digit/10) - prevDigit2; 
-let prevDigit3 = (digit/10) %10;  
-// console.log (prevDigit3);
-digit = (digit/10) - prevDigit3; 
-let prevDigit4 = (digit/10) % 10; 
-// console.log (prevDigit4);
-digit = (digit/10) - prevDigit4; 
-let firstDigit = digit/10; 
-// console.log (firstDigit);
-if (firstDigit === lastDigit && prevDigit === prevDigit4 && prevDigit2 === prevDigit3) {
-    console.log('The six-digit is mirror number');
+// digit = digit - lastDigit; 
+// let prevtDigit = (digit/10) %10;  
+// console.log(prevtDigit);
+// let firstDigit = ((digit/10) - prevtDigit)/10; 
+// console.log(firstDigit);
+// if ((firstDigit === prevtDigit && firstDigit !== lastDigit) || 
+// (firstDigit === lastDigit && firstDigit !== prevtDigit) || 
+// (prevtDigit === lastDigit && prevtDigit !== firstDigit))  {
+// console.log('Among the numbers there are the same');
+// }
+// else if (firstDigit === prevtDigit  && firstDigit === lastDigit && prevtDigit === lastDigit)  {
+//     console.log('All the digits are the same');
+// }
+// else {
+//     console.log('All the digits are different');
+// }
+
+
+
+// //HW4.3
+// let year = prompt ('Enter your year of birth');
+// if (year === null ) {
+//     alert (`Too bad you didn't want to provide the information.`);
+// }
+// let city = prompt ('Enter the city where you live');
+// if (city === null ) {
+//     alert (`Too bad you didn't want to provide the information.`);
+// }
+// let sport = prompt ('Enter favorite sport');
+// if (sport === null ) {
+//     alert (`Too bad you didn't want to provide the information.`);
+// }
+// let age;
+// if (year === null) {
+// age = 'Year is not stecified';
+// }
+// else {
+//     age = 2025 - year;
+// }
+// if (city === 'Kyiv')  {
+//     let country = 'Ukraine';
+//     alert (`Your age: ${age} You live in the capital of ${country}`);
+// }
+// else if (city === 'Washington')  {
+//     let country = 'the United States';
+//     alert (`Your age: ${age} You live in the capital of ${country}`);
+// }
+// else if (city === 'London')  {
+//     let country = 'the United Kingdom';
+//     alert (`Your age: ${age} You live in the capital of ${country}`);
+// }
+// else if (city === null)  {
+//     alert (`Your age: ${age} City is not specified`);
+// }
+// else {
+//     alert (`Your age: ${age} You live in ${city}`);
+// }
+
+// if (sport==='hockey') {
+//     let champion = 'Connor McDavid';
+//     alert (`Cool! Do you want to be like ${champion}?`);
+// }
+// if (sport==='football') {
+//     let champion = 'David Beckham';
+//     alert (`Cool! Do you want to be like ${champion}?`);
+// }
+// if (sport==='dance') {
+//     let champion = 'Joanne Clifton';
+//     alert (`Cool! Do you want to be like ${champion}?`);
+// }
+// if (sport===null) {
+//     alert (`Sport is not specified`);
+// }
+
+
+//4.4
+// let numOrStr = prompt('input number or string');
+// console.log(numOrStr)
+
+
+// if (numOrStr === null) {
+//     console.log('ви скасували')
+// } else if (numOrStr.trim() === '') {
+//     console.log('Empty String');
+// } else if (isNaN(+numOrStr)) {
+//     console.log(' number is Ba_NaN')
+// } else {
+//     console.log('OK!')
+// }
+
+
+let numOrStr = prompt('input number or string');
+console.log(numOrStr)
+switch (true)
+{
+    case numOrStr === null: console.log('ви скасували');
+    break;
+    case  numOrStr.trim() === '': console.log('Empty String');
+    break; 
+    case isNaN(+numOrStr): console.log(' number is Ba_NaN');
+    break;
+    default: console.log('OK!');
 }
-else {
-    console.log('The six-digit is not mirror number');
-}
+
