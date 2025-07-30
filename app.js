@@ -321,16 +321,171 @@
 // }
 
 
-let numOrStr = prompt('input number or string');
-console.log(numOrStr)
-switch (true)
-{
-    case numOrStr === null: console.log('ви скасували');
-    break;
-    case  numOrStr.trim() === '': console.log('Empty String');
-    break; 
-    case isNaN(+numOrStr): console.log(' number is Ba_NaN');
-    break;
-    default: console.log('OK!');
-}
+// let numOrStr = prompt('input number or string');
+// console.log(numOrStr)
+// switch (true)
+// {
+//     case numOrStr === null: console.log('ви скасували');
+//     break;
+//     case  numOrStr.trim() === '': console.log('Empty String');
+//     break; 
+//     case isNaN(+numOrStr): console.log(' number is Ba_NaN');
+//     break;
+//     default: console.log('OK!');
+// }
 
+
+
+// Class work 28.07.2025
+//1
+
+// for (let i = 10; i<=20; i++ ) {
+//   if (i<20){
+//     document.write(`${i}, `);
+//   }
+//   else 
+//   document.write(`${i}`);
+//     }
+
+
+ //2
+    
+// for (let i = 10; i<=20; i++ ) {
+//     let b = i*i;
+//     if (i<20) {
+//         document.write(`${b}, `);
+//     }
+//    else 
+//    document.write(`${b}`);
+//     }
+
+// //3
+// let a=7;
+// for (let i = 1; i<=10; i++) {
+//     if (i<10) {
+//         document.write(`${i}*${a}=${i*a}; `);
+//     }
+//     else 
+//     document.write(`${i}*${a}=${i*a}; `);
+// }
+
+
+//4
+// let a=0;
+// for (let i = 1; i<=15; i++) {
+//    a=i+a; 
+// }
+// document.write(`${a}`);
+
+
+//5
+// let a =1n;
+// for (let i=15n; i<=35n; i++) {
+//     a=a*i;
+// }
+// document.write(`${a}`);
+
+
+//6
+// let a=0;
+// for (let i=1; i<=500; i++) {
+//     if (i<500){
+//         a=i+a;
+//     }
+// else 
+// document.write(`${a=(i+a)/i}`);
+// }
+
+//7
+// let a=0;
+// for (let i=30; i<=80; i++){
+// if (i % 2 === 0) {
+//     a=a+i;
+// }
+// }
+// document.write (`${a}`);
+
+
+//8
+// for (let i=100; i<=200; i++) {
+//     if (i % 3 === 0) {
+//             document.write (`${i}, `);
+//     }
+// }
+
+
+//9
+// let digit = prompt('Enter a natural number');
+// digit = Number(digit);
+// let a=0;
+// let sum=0;
+// for (let i=1; i<=digit; i++) {
+//     if (digit % i === 0 ) {
+//         document.write(`${i} `);
+//         if (i % 2 === 0) {
+//         a=a+1;
+//         sum=sum+i;
+//     }
+// }
+// }
+// document.write(` Кількість парних дільників: ${a}`); 
+// document.write(` Сума парних дільників: ${sum}`);
+
+
+//10
+// for (let a=1; a<=10; a++) {
+// for (let i = 1; i<=10; i++) {
+//     if (i<10) {
+//         document.write(`${i}*${a}=${i*a}; `);
+//     }
+//     else 
+//     document.write(`${i}*${a}=${i*a}; <br>`);
+// }
+// }
+
+
+// //HW 1 
+// let a='';
+// for(let i=20; i<=30; i+=0.5) {
+//   a=a+i+' ';  
+// }
+// console.log(a);
+
+//2
+// let usd=26;
+// for (let i=10; i<=100; i+=10) {
+//     let a=i*usd;
+//     console.log(`${i}USD=${a}`);    
+// }
+
+
+//3
+// let digit = prompt('Enter a natural number');
+// for (let i=1; i<=100; i++) {
+//     if (i *i <= digit){
+// document.write(`${i} `);
+//     }
+// }
+
+
+//4 
+// let digit = prompt('Enter a natural number');
+// digit=Number(digit);
+// let a=true;
+// if (digit>1) {
+//     for (let i=2; i<digit; i++) {
+//         if (digit%i ===0) {
+//             a=false;
+//             break;
+//         }
+//     }
+//     if (a){
+//         document.write(`${digit} is a prime number.`);
+//     }
+//         else {
+//             document.write(`${digit} is not a prime number.`);
+//         }
+// }         
+// else {
+//     document.write(`${digit} is not a prime number.`);  
+// }
