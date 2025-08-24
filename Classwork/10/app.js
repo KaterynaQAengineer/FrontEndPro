@@ -1,10 +1,35 @@
-//10 Вивести на сторінку повну таблицю множення від 1 до 10 
-for (let i=1; i<=10; i++) {
-for (let a = 1; a<=10; a++) {
-    if (a<10) {
-        document.write(`${i}*${a}=${i*a}; `);
+"use strict";
+let company = {
+  sales: [
+    { name: "John", salary: 1000 },
+    { name: "Alice", salary: 600 },
+  ],
+  development: {
+    web: [
+      { name: "Peter", salsry: 2000 },
+      { name: "Alex", salary: 1800 },
+    ],
+    internals: [{ name: "Jack", salary: 1300 }],
+  },
+};
+
+function sum(department) {
+    if (Array.isArray(department)){
+let sumSalary=0;
+for(let employee of department) {
+    sumSalary=sumSalary+employee.salary;
+}
+    
+  return sumSalary;
+}
+
+else 
+{
+    let sumSalary=0;
+    for (let internDep of Object.values(department)){
+        sumSalary=sumSalary+sum(internDep);
     }
-    else 
-    document.write(`${i}*${a}=${i*a}; <br>`);
+  return sumSalary;
 }
 }
+console.log(sum(company));
