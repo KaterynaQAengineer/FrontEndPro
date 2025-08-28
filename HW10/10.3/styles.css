@@ -1,0 +1,21 @@
+.cards-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px;
+	margin: 32px auto;
+	justify-content: center;
+}
+
+.cards-container div {
+	background: linear-gradient(135deg, #f8fafc 60%, #dbeafe 100%);
+	border: 1px solid #60a5fa;
+	border-radius: 12px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+	padding: 24px 32px;
+	font-size: 1.1rem;
+	color: #1e293b;
+	font-weight: 500;
+	min-width: 180px;
+	text-align: center;
+	transition: transform 0.2s;
+}
