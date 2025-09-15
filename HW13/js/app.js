@@ -1,4 +1,5 @@
 "use strict";
+
 const showCategories = () => {
   const parent = document.querySelector('.categories');
   if (!parent) return;
@@ -71,7 +72,7 @@ const showProductInfo = product => {
   infoBlock.appendChild(buyBtn);
 };
 
-// Форма замовлення
+// ⚡ Форма замовлення
 const showOrderForm = product => {
   const orderDetails = document.querySelector('.order-details');
   if (!orderDetails) return;
@@ -125,20 +126,78 @@ const showOrderForm = product => {
       return;
     }
 
-    // Якщо все ок → показати підтвердження
+    // ⚡ Зберігаємо замовлення в localStorage
+    const newOrder = {
+      id: Date.now(),
+      date: new Date().toLocaleString(),
+      name: product.name,
+      price: product.price,
+      quantity: quantity,
+      total: product.price * quantity
+    };
+
+    const orders = JSON.parse(localStorage.getItem("orders")) || [];
+    orders.push(newOrder);
+    localStorage.setItem("orders", JSON.stringify(orders));
+
+    // Підтвердження
     orderDetails.innerHTML = `
       <h3>✅ Замовлення підтверджено!</h3>
       <p><strong>Товар:</strong> ${product.name}</p>
       <p><strong>Ціна:</strong> $${product.price}</p>
-      <p><strong>ПІБ:</strong> ${fullname}</p>
-      <p><strong>Місто:</strong> ${city}</p>
-      <p><strong>Склад Нової пошти:</strong> ${warehouse}</p>
-      <p><strong>Оплата:</strong> ${payment}</p>
       <p><strong>Кількість:</strong> ${quantity}</p>
-      <p><strong>Коментар:</strong> ${comment || '—'}</p>
       <p><strong>Сума до оплати:</strong> $${product.price * quantity}</p>
     `;
   });
 };
 
 showCategories();
+
+
+// ⚡ Показ замовлень
+document.querySelector('.my-orders').addEventListener('click', () => {
+  const wrapper = document.querySelector('.wrapper');
+  const ordersSection = document.getElementById('ordersSection');
+
+  wrapper.style.display = "none";
+  ordersSection.style.display = "block";
+  ordersSection.innerHTML = "";
+
+  const orders = JSON.parse(localStorage.getItem('orders')) || [];
+
+  if (orders.length === 0) {
+    ordersSection.innerHTML = '<p>Замовлень немає</p>';
+  } else {
+    orders.forEach((order, index) => {
+      const element = document.createElement('div');
+      element.innerHTML = `
+        <p>${order.date} - ${order.name} - $${order.price} × ${order.quantity} = $${order.total}</p>
+        <button class="delete-btn">Видалити</button>
+      `;
+
+      // видалення
+      element.querySelector('.delete-btn').addEventListener('click', () => {
+        orders.splice(index, 1);
+        localStorage.setItem('orders', JSON.stringify(orders));
+        element.remove();
+      });
+
+      ordersSection.appendChild(element);
+    });
+  }
+
+  // кнопка назад
+  const backBtn = document.createElement('button');
+  backBtn.textContent = "Назад";
+  backBtn.addEventListener('click', () => {
+    ordersSection.style.display = "none";
+    wrapper.style.display = "block";
+    wrapper.innerHTML = `
+      <div class="categories"></div>
+      <div class="products"></div>
+      <div class="info"></div>
+    `;
+    showCategories();
+  });
+  ordersSection.appendChild(backBtn);
+});
