@@ -6,7 +6,7 @@ let company = {
   ],
   development: {
     web: [
-      { name: "Peter", salsry: 2000 },
+      { name: "Peter", salary: 2000 },
       { name: "Alex", salary: 1800 },
     ],
     internals: [{ name: "Jack", salary: 1300 }],
