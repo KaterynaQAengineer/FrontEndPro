@@ -1,0 +1,45 @@
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+  }
+  
+  .slider img {
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .nav-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.3s;
+  }
+  
+  .nav-btn:hover {
+    color: #555;
+  }
+  
+  .dots {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background: #bbb;
+    cursor: pointer;
+  }
+  
+  .active-dot {
+    background: #333;
+  }
+  
