@@ -1,0 +1,26 @@
+{
+  "name": "hillel_pro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KaterynaQAengineer/FrontEndPro.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KaterynaQAengineer/FrontEndPro/issues"
+  },
+  "homepage": "https://github.com/KaterynaQAengineer/FrontEndPro#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "moment": "^2.30.1"
+  },
+  "devDependencies": {
+    "serve": "^14.2.5"
+  }
+}

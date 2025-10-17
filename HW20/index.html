@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div
+      class="d-flex flex-column justify-content-center align-items-center vh-100"
+    >
+      <div class="d-flex gap-3 mb-3">
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          data-bs-title="Test Tooltip on bottom"
+          data-bs-placement="bottom"
+          data-bs-toggle-tooltip
+        >
+          Open modal window
+        </button>
+
+        <button type="button" class="btn btn-success" id="liveAlertBtn">
+          Show live alert
+        </button>
+      </div>
+
+      <div id="liveAlertPlaceholder" class="text-center"></div>
+
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Modal title
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">Test Modal window</div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Moment.js завдання -->
+      <div class="container mt-5">
+        <h2>Date of birth</h2>
+
+        <p>My date of birth : <span id="myBirthday"></span></p>
+        <div class="mb-3">
+          <label for="userBirthday" class="form-label"
+            >Enter you date of birth (DD/ММ/YYYY):</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="userBirthday"
+            placeholder="Sample: 07/06/1986"
+          />
+        </div>
+
+        <button id="submitBtn" class="btn btn-primary">Date transform</button>
+        <div id="output" class="mt-3"></div>
+      </div>
+    </div>
+
+    <script src="../node_modules/moment/min/moment.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
