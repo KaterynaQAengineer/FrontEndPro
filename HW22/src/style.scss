@@ -1,0 +1,55 @@
+// Variables
+$bg-people-color: #df8404;
+$bg-planets-color: #048a59;
+$bg-vehicles-color: #03491b;
+$list-item-bg: rgba(255, 255, 255, 0.2);
+$list-item-color: white;
+$font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+// Mixin for background color
+@mixin background-color($color) {
+  background-color: $color;
+}
+
+// Mixin for button color
+@mixin button-color($color) {
+  color: $color;
+}
+
+// Styles
+.bg-people {
+  @include background-color($bg-people-color);
+
+  .btn-light {
+    @include button-color($bg-people-color);
+  }
+}
+
+.bg-planets {
+  @include background-color($bg-planets-color);
+
+  .btn-light {
+    @include button-color($bg-planets-color);
+  }
+}
+
+.bg-vehicles {
+  @include background-color($bg-vehicles-color);
+
+  .btn-light {
+    @include button-color($bg-vehicles-color);
+  }
+}
+
+.list-group-item {
+  background-color: $list-item-bg;
+  border: none;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  color: $list-item-color;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-family: $font-family;
+}
