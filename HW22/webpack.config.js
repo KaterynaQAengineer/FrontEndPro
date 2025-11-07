@@ -60,7 +60,7 @@ module.exports = (env, argv) => {
       static: {
         directory: path.join(__dirname, "dist"),
       },
-      port: 3000,
+      port: 3001,
       open: true,
       hot: true,
     },

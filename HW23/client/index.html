@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Todo List</h1>
+
+      <form id="todo-form">
+        <input type="text" id="title" placeholder="Title" required />
+        <input
+          type="text"
+          id="description"
+          placeholder="Description"
+          required
+        />
+        <select id="priority">
+          <option>Low</option>
+          <option>Medium</option>
+          <option>High</option>
+        </select>
+        <select id="status">
+          <option>To do</option>
+          <option>In Progress</option>
+        </select>
+        <button type="submit">Add Todo</button>
+      </form>
+      <p class="hint">Press <b>Done</b> if the task is completed</p>
+      <ul id="todo-list"></ul>
+    </div>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
